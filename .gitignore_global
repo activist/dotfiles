@@ -1,0 +1,17 @@
+
+####### Filer
+.idea
+.iml
+Gemfile.lock 
+#ignorerer denne for naa
+
+
+####### Mapper
+/tmp/
+
+# Ruby
+spec/
+
+# Java
+target/*
+
