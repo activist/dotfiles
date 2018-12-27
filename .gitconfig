@@ -1,0 +1,26 @@
+[user]
+	name = Jan Martin Langeland
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	up = rebase
+	ci = commit
+	pr = pull --rebase
+	lga = log --graph --oneline --all --decorate
+	prettylog = log --pretty=oneline --abbrev-commit
+	#Grouped search
+	gg = grep --break --heading -n
+[help]
+	autocorrect = 1
+[color]
+	ui = auto
+[push]
+	default = simple
+
+
+
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	editor = subl -n -w
