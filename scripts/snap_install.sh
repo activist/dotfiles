@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo snap install auto-cpufreq \
+		discord \
 		ngrok \
 		slack
 
