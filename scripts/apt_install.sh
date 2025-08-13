@@ -5,7 +5,6 @@ curl -sSL -O https://packages.microsoft.com/config/ubuntu/25.04/packages-microso
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 
-
 sudo add-apt-repository ppa:hluk/copyq -y
 curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -15,10 +14,6 @@ curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
-wget -q -0 https://downloads.vivaldi.com/stable/vivaldi-stable_7.5.3735.62-1_amd64.deb
-sudo apt-get -y install ./vivaldi*.deb
-rm ./vivaldi-stable_7.5.3735.62-1_amd64.deb
-
 #curl -s https://s3.eu-central-1.amazonaws.com/jetbrains-ppa/0xA6E8698A.pub.asc | sudo apt-key add -
 #echo "deb http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com bionic main" | sudo tee /etc/apt/sources.list.d/jetbrains-ppa.list > /dev/null
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -26,11 +21,18 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo add-apt-repository ppa:mozillateam/thunderbird-stable -y
 wget -O - https://repo.jotta.us/public.gpg | sudo apt-key add -
 echo "deb https://repo.jotta.us/debian debian main" | sudo tee /etc/apt/sources.list.d/jotta-cli.list
-echo "deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu bionic main" | sudo tee /etc/apt/sources.list.d/dropbox.list
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
 
-#sudo add-apt-repository ppa:linuxuprising/java -y
-#curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+# Vivaldi
+wget -q -0 https://downloads.vivaldi.com/stable/vivaldi-stable_7.5.3735.62-1_amd64.deb
+sudo apt-get -y install ./vivaldi*.deb
+rm ./vivaldi-stable_7.5.3735.62-1_amd64.deb
+
+# Dropbox
+wget -q -0 https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2025.05.20_amd64.deb
+sudo apt-get -y install ./dropbox_2025.05.20_amd64.deb
+rm dropbox_2025.05.20_amd64.deb
+
+
 
 sudo apt-get update
 
