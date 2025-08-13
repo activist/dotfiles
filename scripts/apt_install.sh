@@ -37,6 +37,8 @@ rm dropbox_2025.05.20_amd64.deb
 
 sudo apt-get update
 
+#libfuse2 is required by Jetbrains toolbox
+
 sudo apt-get install -y tilix \
 	copyq \
  	dotnet-sdk-8.0 \
@@ -44,11 +46,13 @@ sudo apt-get install -y tilix \
  	dotnet-sdk-9.0 \
   	aspnetcore-runtime-9.0 \
 	dropbox python3-gpg \
+ 	git \
 	google-chrome-stable \
 	flameshot \
 	firefox \
  	filezilla \
 	jotta-cli \
+ 	libfuse2 \
 	maven \
 	meld \
 	solaar \
