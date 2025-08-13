@@ -37,7 +37,7 @@ sudo apt-get update
 sudo apt-get install -y tilix \
 	copyq \
  	dotnet-sdk-8.0 \
-  	aspnetcore-runtime-9.0 \
+  	aspnetcore-runtime-8.0 \
  	dotnet-sdk-9.0 \
   	aspnetcore-runtime-9.0 \
 	dropbox python3-gpg \
