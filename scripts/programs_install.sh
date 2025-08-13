@@ -11,4 +11,6 @@ sudo dpkg -i "tenv_${LATEST_VERSION}_amd64.deb"
 #nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
 echo "Done installing programs!"
