@@ -19,8 +19,9 @@ sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /e
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo add-apt-repository ppa:mozillateam/thunderbird-stable -y
-wget -O - https://repo.jotta.us/public.gpg | sudo apt-key add -
-echo "deb https://repo.jotta.us/debian debian main" | sudo tee /etc/apt/sources.list.d/jotta-cli.list
+
+sudo curl -fsSL https://repo.jotta.cloud/public.asc -o /usr/share/keyrings/jotta.gpg
+echo "deb [signed-by=/usr/share/keyrings/jotta.gpg] https://repo.jotta.cloud/debian debian main" | sudo tee /etc/apt/sources.list.d/jotta-cli.list
 
 # Vivaldi
 wget -q -0 https://downloads.vivaldi.com/stable/vivaldi-stable_7.5.3735.62-1_amd64.deb
@@ -38,6 +39,7 @@ sudo apt-get update
 
 sudo apt-get install -y tilix \
 	copyq \
+
  	dotnet-sdk-8.0 \
   	aspnetcore-runtime-8.0 \
  	dotnet-sdk-9.0 \
