@@ -36,6 +36,7 @@ sudo apt-get install -y tilix \
 	google-chrome-stable \
 	flameshot \
 	firefox \
+ 	filezilla \
 	jotta-cli \
 	maven \
 	meld \
