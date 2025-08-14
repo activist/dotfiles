@@ -3,7 +3,7 @@
 sudo snap install \
 #		auto-cpufreq \
 #		discord \
-		ngrok \
+#		ngrok \
 		slack
 
 
