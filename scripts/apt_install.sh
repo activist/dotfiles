@@ -42,8 +42,7 @@ type -p dropboxd > /dev/null
 	&& rm dropbox_2025.05.20_amd64.deb
 
 # Zettlr
-sudo gpg --keyserver keyserver.ubuntu.com --recv-keys B11283BEDEEB11CF
-curl -s --compressed "https://apt.zettlr.com/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/zettlr_apt.gpg > /dev/null
+curl -s --compressed "https://ppa.zettlr.com/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/zettlr_ppa.gpg > /dev/null
 # Second, add this repository to your sources
 sudo curl -s --compressed -o /etc/apt/sources.list.d/zettlr.list "https://apt.zettlr.com/zettlr.list"
 
