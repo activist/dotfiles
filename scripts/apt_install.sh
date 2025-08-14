@@ -2,7 +2,7 @@
 
 # prerequisites
 sudo apt update
-sudo apt install curl
+sudo apt install curl apt-transport-https ca-certificates
 
 #sudo add-apt-repository ppa:webupd8team/terminix -y
 curl -sSL -O https://packages.microsoft.com/config/ubuntu/25.04/packages-microsoft-prod.deb
