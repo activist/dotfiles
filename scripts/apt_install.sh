@@ -38,7 +38,7 @@ curl -s --compressed "https://apt.zettlr.com/KEY.gpg" | gpg --dearmor | sudo tee
 # Second, add this repository to your sources
 sudo curl -s --compressed -o /etc/apt/sources.list.d/zettlr.list "https://apt.zettlr.com/zettlr.list"
 
-
+wget https://github.com/derailed/k9s/releases/latest/download/k9s_linux_amd64.deb && apt install ./k9s_linux_amd64.deb && rm k9s_linux_amd64.deb
 
 sudo apt-get update
 
