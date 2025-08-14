@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #./symlink.sh
-sudo ./apt_install.sh
-sudo ./snap_install.sh
-sudo ./programs_install.sh
+./apt_install.sh
+./snap_install.sh 
+./programs_install.sh
 #./desktop.sh
 # Get all upgrades
 sudo apt upgrade -y
