@@ -20,4 +20,6 @@ wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.8.1.52155.tar.gz
 tar -xzf jetbrains-toolbox-2.8.1.52155.tar.gz && cd jetbrains-toolbox-2.8.1.52155/bin && ./jetbrains-toolbox
 rm jetbrains-toolbox-2.8.1.52155.tar.gz
 
+
+cd -
 echo "Done installing programs!"
