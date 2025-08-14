@@ -12,7 +12,6 @@ rm packages-microsoft-prod.deb
 
 sudo add-apt-repository ppa:hluk/copyq -y
 
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 5E3C45D7B312C643
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
