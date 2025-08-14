@@ -86,6 +86,7 @@ sudo apt-get install -y tilix \
 	solaar \
 	spotify-client \
 	sublime-text \
+ 	tlp \
 	thunderbird \
  	zettlr
 
