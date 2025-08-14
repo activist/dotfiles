@@ -35,14 +35,16 @@ sudo curl -fsSL https://repo.jotta.cloud/public.asc -o /usr/share/keyrings/jotta
 echo "deb [signed-by=/usr/share/keyrings/jotta.gpg] https://repo.jotta.cloud/debian debian main" | sudo tee /etc/apt/sources.list.d/jotta-cli.list
 
 # Vivaldi
-wget https://downloads.vivaldi.com/stable/vivaldi-stable_7.5.3735.62-1_amd64.deb
-sudo apt-get -y install ./vivaldi-stable_7.5.3735.62-1_amd64.deb
-rm ./vivaldi-stable_7.5.3735.62-1_amd64.deb
+type -p vivaldi-stable > /dev/null
+	&& wget https://downloads.vivaldi.com/stable/vivaldi-stable_7.5.3735.62-1_amd64.deb
+	&& sudo apt-get -y install ./vivaldi-stable_7.5.3735.62-1_amd64.deb
+	&& rm ./vivaldi-stable_7.5.3735.62-1_amd64.deb
 
 # Dropbox
-wget -q https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2025.05.20_amd64.deb
-sudo apt-get -y install ./dropbox_2025.05.20_amd64.deb
-rm dropbox_2025.05.20_amd64.deb
+type -p dropboxd > /dev/null
+	&& wget -q https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2025.05.20_amd64.deb
+	&& sudo apt-get -y install ./dropbox_2025.05.20_amd64.deb
+	&& rm dropbox_2025.05.20_amd64.deb
 
 # Zettlr
 curl -s --compressed "https://apt.zettlr.com/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/zettlr_apt.gpg > /dev/null
