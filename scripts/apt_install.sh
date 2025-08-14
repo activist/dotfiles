@@ -2,7 +2,7 @@ e#!/bin/bash
 
 # prerequisites
 sudo apt update
-sudo apt install -y curl wget apt-transport-https ca-certificates
+sudo apt install -y curl wget apt-transport-https ca-certificates jq
 
 
 #sudo add-apt-repository ppa:webupd8team/terminix -y
@@ -16,6 +16,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 5E3C45D7B312C643
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
+sudo add-apt-repository ppa:solaar-unifying/stable
 sudo add-apt-repository ppa:daniel.pavel/solaar -y
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 #cannot be run multiple times wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
