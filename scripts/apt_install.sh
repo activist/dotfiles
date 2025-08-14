@@ -63,6 +63,11 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 	&& sudo apt update \
 	&& sudo apt install gh -y
 
+#tenv
+LATEST_VERSION=$(curl --silent https://api.github.com/repos/tofuutils/tenv/releases/latest | jq -r .tag_name)
+curl -O -L "https://github.com/tofuutils/tenv/releases/latest/download/tenv_${LATEST_VERSION}_amd64.deb"
+sudo dpkg -i "tenv_${LATEST_VERSION}_amd64.deb"
+
 
 sudo apt-get update
 
@@ -92,10 +97,5 @@ sudo apt-get install -y tilix \
 	sublime-text \
 	thunderbird \
  	zettlr
-
-#tenv
-LATEST_VERSION=$(curl --silent https://api.github.com/repos/tofuutils/tenv/releases/latest | jq -r .tag_name)
-curl -O -L "https://github.com/tofuutils/tenv/releases/latest/download/tenv_${LATEST_VERSION}_amd64.deb"
-sudo dpkg -i "tenv_${LATEST_VERSION}_amd64.deb"
 
 echo "Done installing apt packages!"
