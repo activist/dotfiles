@@ -4,7 +4,8 @@ sudo snap install \
 #		auto-cpufreq \
 #		discord \
 #		ngrok \
-		slack
+		slack \
+  		spotify
 
 
 # Post install commands
