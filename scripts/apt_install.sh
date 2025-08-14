@@ -31,8 +31,8 @@ sudo curl -fsSL https://repo.jotta.cloud/public.asc -o /usr/share/keyrings/jotta
 echo "deb [signed-by=/usr/share/keyrings/jotta.gpg] https://repo.jotta.cloud/debian debian main" | sudo tee /etc/apt/sources.list.d/jotta-cli.list
 
 # Vivaldi
-wget -q -0 https://downloads.vivaldi.com/stable/vivaldi-stable_7.5.3735.62-1_amd64.deb
-sudo apt-get -y install ./vivaldi*.deb
+wget https://downloads.vivaldi.com/stable/vivaldi-stable_7.5.3735.62-1_amd64.deb
+sudo apt-get -y install ./vivaldi-stable_7.5.3735.62-1_amd64.deb
 rm ./vivaldi-stable_7.5.3735.62-1_amd64.deb
 
 # Dropbox
