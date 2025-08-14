@@ -12,11 +12,6 @@ rm packages-microsoft-prod.deb
 
 sudo add-apt-repository ppa:hluk/copyq -y
 
-# Fetch key and convert to GPG format
-sudo gpg --keyserver keyserver.ubuntu.com --recv-keys C85668DF69375001 F57D4F59BD3DF454
-gpg --export C85668DF69375001 F57D4F59BD3DF454 | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/spotify.gpg
-echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-
 sudo add-apt-repository ppa:solaar-unifying/stable -y
 sudo add-apt-repository ppa:daniel.pavel/solaar -y
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
