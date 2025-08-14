@@ -12,7 +12,9 @@ rm packages-microsoft-prod.deb
 
 sudo add-apt-repository ppa:hluk/copyq -y
 
-curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+# Fetch key and convert to GPG format
+sudo gpg --keyserver keyserver.ubuntu.com --recv-keys C85668DF69375001 F57D4F59BD3DF454
+gpg --export C85668DF69375001 F57D4F59BD3DF454 | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo add-apt-repository ppa:solaar-unifying/stable -y
