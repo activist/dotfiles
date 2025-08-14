@@ -38,7 +38,7 @@ sudo apt-get -y install ./vivaldi-stable_7.5.3735.62-1_amd64.deb
 rm ./vivaldi-stable_7.5.3735.62-1_amd64.deb
 
 # Dropbox
-wget -q -0 https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2025.05.20_amd64.deb
+wget -q https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2025.05.20_amd64.deb
 sudo apt-get -y install ./dropbox_2025.05.20_amd64.deb
 rm dropbox_2025.05.20_amd64.deb
 
