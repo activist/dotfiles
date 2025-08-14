@@ -85,7 +85,7 @@ sudo apt-get install -y tilix \
   	aspnetcore-runtime-9.0 \
 	dropbox python3-gpg \
  	git \
-	google-chrome-stable \
+	#google-chrome-stable \
 	flameshot \
 	firefox \
  	filezilla \
