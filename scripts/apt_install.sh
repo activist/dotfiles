@@ -2,7 +2,7 @@ e#!/bin/bash
 
 # prerequisites
 sudo apt update
-sudo apt install curl wget apt-transport-https ca-certificates
+sudo apt install -y curl wget apt-transport-https ca-certificates
 
 
 #sudo add-apt-repository ppa:webupd8team/terminix -y
