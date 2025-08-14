@@ -33,6 +33,11 @@ wget -q -0 https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2025.05.2
 sudo apt-get -y install ./dropbox_2025.05.20_amd64.deb
 rm dropbox_2025.05.20_amd64.deb
 
+#Zettlr
+curl -s --compressed "https://apt.zettlr.com/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/zettlr_apt.gpg > /dev/null
+# Second, add this repository to your sources
+sudo curl -s --compressed -o /etc/apt/sources.list.d/zettlr.list "https://apt.zettlr.com/zettlr.list"
+
 
 
 sudo apt-get update
@@ -58,7 +63,8 @@ sudo apt-get install -y tilix \
 	solaar \
 	spotify-client \
 	sublime-text \
-	thunderbird
+	thunderbird \
+ 	zettlr
 
 #tenv
 LATEST_VERSION=$(curl --silent https://api.github.com/repos/tofuutils/tenv/releases/latest | jq -r .tag_name)
