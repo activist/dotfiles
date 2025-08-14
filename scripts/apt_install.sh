@@ -20,6 +20,8 @@ echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/so
 sudo add-apt-repository ppa:solaar-unifying/stable -y
 sudo add-apt-repository ppa:daniel.pavel/solaar -y
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+sudo gpg --keyserver keyserver.ubuntu.com --recv-keys 32EE5355A6BC6E42
 #cannot be run multiple times wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 #sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
