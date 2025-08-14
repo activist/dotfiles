@@ -38,7 +38,13 @@ curl -s --compressed "https://apt.zettlr.com/KEY.gpg" | gpg --dearmor | sudo tee
 # Second, add this repository to your sources
 sudo curl -s --compressed -o /etc/apt/sources.list.d/zettlr.list "https://apt.zettlr.com/zettlr.list"
 
+#k9s
 wget https://github.com/derailed/k9s/releases/latest/download/k9s_linux_amd64.deb && apt install ./k9s_linux_amd64.deb && rm k9s_linux_amd64.deb
+
+#Docker (ce)
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
 
 sudo apt-get update
 
@@ -46,6 +52,9 @@ sudo apt-get update
 
 sudo apt-get install -y tilix \
 	copyq \
+  	docker-ce \
+   	docker-ce-cli \
+	containerd.io \
  	dotnet-sdk-8.0 \
   	aspnetcore-runtime-8.0 \
  	dotnet-sdk-9.0 \
