@@ -17,6 +17,8 @@ rm packages-microsoft-prod.deb
 
 sudo add-apt-repository ppa:hluk/copyq -y
 
+sudo apt-add-repository -y ppa:cappelikan/ppa
+
 sudo add-apt-repository ppa:solaar-unifying/stable -y
 sudo add-apt-repository ppa:daniel.pavel/solaar -y
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -86,12 +88,12 @@ sudo apt-get install -y tilix \
  	filezilla \
 	jotta-cli \
  	libfuse2 \
+  	mainline \
 	maven \
 	meld \
 	solaar \
 	spotify-client \
 	sublime-text \
- 	tlp \
 	thunderbird \
  	zettlr
 
